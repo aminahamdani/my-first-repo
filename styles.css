@@ -1,0 +1,201 @@
+/**
+ * Main stylesheet for my-first-repo
+ * Colors, typography, and layout
+ */
+
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --success-color: #28a745;
+  --danger-color: #dc3545;
+  --warning-color: #ffc107;
+  --light-bg: #f5f5f5;
+  --white: #ffffff;
+  --text-dark: #333333;
+  --text-light: #666666;
+  --border-radius: 8px;
+  --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-dark);
+  background: linear-gradient(135deg, var(--light-bg) 0%, #e9ecef 100%);
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+h1 {
+  font-size: 2.5em;
+  border-bottom: 3px solid var(--primary-color);
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+h2 {
+  font-size: 1.8em;
+  color: var(--primary-color);
+}
+
+h3 {
+  font-size: 1.3em;
+}
+
+p {
+  margin-bottom: 1em;
+  color: var(--text-light);
+}
+
+/* Links */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+a:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #667bc6;
+}
+
+/* Lists */
+ul, ol {
+  margin-left: 2em;
+  margin-bottom: 1em;
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
+/* Highlight Box */
+.highlight {
+  background: linear-gradient(135deg, #fffacd 0%, #ffeaa7 100%);
+  border-left: 4px solid var(--warning-color);
+  padding: 15px 20px;
+  margin: 20px 0;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.highlight strong {
+  color: var(--text-dark);
+}
+
+/* Container */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--white);
+  padding: 40px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+/* Buttons */
+button, .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  background: var(--primary-color);
+  color: var(--white);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  font-size: 1em;
+  font-weight: 600;
+}
+
+button:hover, .btn:hover {
+  background: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: var(--box-shadow);
+}
+
+button:active, .btn:active {
+  transform: translateY(0);
+}
+
+/* Code blocks */
+code, pre {
+  background: #f4f4f4;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9em;
+}
+
+code {
+  padding: 2px 6px;
+  color: var(--danger-color);
+}
+
+pre {
+  padding: 15px;
+  overflow-x: auto;
+  margin: 15px 0;
+  border-left: 3px solid var(--primary-color);
+}
+
+pre code {
+  color: inherit;
+  background: transparent;
+  padding: 0;
+}
+
+/* Cards */
+.card {
+  background: var(--white);
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  padding: 20px;
+  margin: 15px 0;
+  box-shadow: var(--box-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px 0;
+  border-top: 1px solid #ddd;
+  color: var(--text-light);
+  font-size: 0.9em;
+}
+
+/* Accessibility */
+:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
